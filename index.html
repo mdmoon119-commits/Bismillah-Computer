@@ -8,6 +8,40 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- UPDATE NOTICE -->
+<div class="update-notice">
+  🔧 ওয়েবসাইটে আপডেট চলছে — কিছু তথ্য এখনো যুক্ত হয়নি!
+</div>
+
+<style>
+  .update-notice {
+    background-color: #ff0000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    animation: noticeBlink 2s infinite;
+  }
+
+  @keyframes noticeBlink {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
+  }
+
+  /* যেন navbar নিচে না লুকায় */
+  body {
+    margin-top: 50px;
+  }
+</style>
+
 
   <!-- NAVBAR -->
   <header class="navbar">
@@ -108,6 +142,7 @@
   
 </body>
 </html>
+
 
 
 
