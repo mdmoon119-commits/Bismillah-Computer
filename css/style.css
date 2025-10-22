@@ -346,3 +346,71 @@ footer {
     width: 100%;
   }
 }
+/* ===== আমাদের বিশেষত্ব ও মতামত সেকশন ডিজাইন ===== */
+
+body {
+  background-color: #eef2f3;
+  margin: 0;
+  font-family: "Noto Sans Bengali", sans-serif;
+}
+
+.section {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  margin: 40px auto;
+  border-radius: 15px;
+  max-width: 900px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 20px;
+  font-size: 26px;
+  border-bottom: 2px solid #2e8b57;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.section ul li::before {
+  content: "✅ ";
+  color: #2e8b57;
+  font-weight: bold;
+}
+
+.section ol {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-left: 20px;
+}
+
+.section .testimonial {
+  background-color: #fff;
+  border-left: 5px solid #2e8b57;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.section .testimonial p {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section .testimonial span {
+  display: block;
+  text-align: right;
+  font-weight: bold;
+  color: #444;
+}
+
