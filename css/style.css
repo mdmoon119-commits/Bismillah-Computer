@@ -108,7 +108,7 @@ body {
 }
 
 /* ==========================
-   HERO SECTION
+   HERO SECTION (Updated with Image Slider)
 ========================== */
 .hero {
     display: flex;
@@ -119,6 +119,8 @@ body {
     color: #fff;
     min-height: 80vh;
     text-align: left;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -127,10 +129,14 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 30px;
+    z-index: 2;
+    position: relative;
 }
 
 .hero-text {
     flex: 1 1 500px;
+    z-index: 3;
+    animation: fadeInUp 2s ease;
 }
 
 .hero-text h1 {
@@ -144,20 +150,50 @@ body {
     margin-bottom: 15px;
 }
 
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
 .hero-image {
     flex: 1 1 400px;
     text-align: center;
+    position: relative;
+    width: 400px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
 }
 
 .hero-image img {
-    max-width: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-    transition: transform 0.5s ease;
+    opacity: 0;
+    animation: slideShow 12s infinite;
 }
 
-.hero-image img:hover {
-    transform: scale(1.05);
+/* ছবিগুলো একটার পর একটা আসবে */
+.hero-image img:nth-child(1) {
+    animation-delay: 0s;
+}
+.hero-image img:nth-child(2) {
+    animation-delay: 4s;
+}
+.hero-image img:nth-child(3) {
+    animation-delay: 8s;
+}
+
+/* স্লাইড অ্যানিমেশন */
+@keyframes slideShow {
+    0% { opacity: 0; transform: scale(1.05); }
+    10% { opacity: 1; transform: scale(1); }
+    30% { opacity: 1; transform: scale(1); }
+    40% { opacity: 0; transform: scale(1.05); }
+    100% { opacity: 0; transform: scale(1.05); }
 }
 
 /* ==========================
