@@ -8,41 +8,11 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
   <!-- UPDATE NOTICE -->
-<div class="update-notice">
-  🔧 ওয়েবসাইটে বর্তমানে আপডেট চলছে। কিছু তথ্য এখনো যুক্ত হয়নি। অনুগ্রহ করে পরে আবার ভিজিট করুন। ধন্যবাদ আপনার সহযোগিতার জন্য!
-</div>
-
-<style>
-  .update-notice {
-    background-color: #ff0000;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 18px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-    animation: noticeBlink 2s infinite;
-  }
-
-  @keyframes noticeBlink {
-    0% { opacity: 1; }
-    50% { opacity: 0.6; }
-    100% { opacity: 1; }
-  }
-
-  /* যেন navbar নিচে না লুকায় */
-  body {
-    margin-top: 50px;
-  }
-</style>
-
-    
+  <div class="update-notice">
+    🔧 ওয়েবসাইটে বর্তমানে আপডেট চলছে। কিছু তথ্য এখনো যুক্ত হয়নি। অনুগ্রহ করে পরে আবার ভিজিট করুন। ধন্যবাদ আপনার সহযোগিতার জন্য!
+  </div>
 
   <!-- NAVBAR -->
   <header class="navbar">
@@ -50,38 +20,34 @@
     <nav id="nav-menu">
       <a href="#home">হোম</a>
       <a href="#services">সেবা</a>
-      <a href="Contact.html">যোগাযোগ</a>
+      <a href="#contact">যোগাযোগ</a>
       <a href="#about">আমাদের সম্পর্কে</a>
       <a href="#gallery">গ্যালারি</a>
-      
-
     </nav>
   </header>
 
-  
+  <!-- ANIMATED TOP TEXT -->
+  <div class="top-animate-text">
+    💻 Bismillah Computer & Online Service - আপনার ডিজিটাল সঙ্গী
+  </div>
 
-<!-- ANIMATED TOP TEXT -->
-<div class="top-animate-text">
-  💻 Bismillah Computer & Online Service - আপনার ডিজিটাল সঙ্গী
-</div>
-<!-- HERO SECTION -->
-  <section class="hero">
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
     <div class="hero-content">
-        <div class="hero-text">
-            <h1>আমাদের সেবা আপনার জন্য</h1>
-            <p>বিসমিল্লাহ কম্পিউটার & অনলাইন সার্ভিস-এ আপনি পাবেন সর্বোত্তম প্রযুক্তি সমাধান।</p>
-            <a href="#services" class="btn">সেবা দেখুন</a>
-        </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1581092795360-f7a1a7e0b6c1?auto=format&fit=crop&w=800&q=80" alt="Slide 1">
-            <img src="https://images.unsplash.com/photo-1581093588401-22f38c0d3a9b?auto=format&fit=crop&w=800&q=80" alt="Slide 2">
-            <img src="https://images.unsplash.com/photo-1581092815360-1a2b3c4d5e6f?auto=format&fit=crop&w=800&q=80" alt="Slide 3">
-        </div>
+      <div class="hero-text">
+        <h1>আমাদের সেবা আপনার জন্য</h1>
+        <p>বিসমিল্লাহ কম্পিউটার & অনলাইন সার্ভিস-এ আপনি পাবেন সর্বোত্তম প্রযুক্তি সমাধান।</p>
+        <a href="#services" class="btn">সেবা দেখুন</a>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1581092795360-f7a1a7e0b6c1?auto=format&fit=crop&w=800&q=80" alt="Slide 1">
+        <img src="https://images.unsplash.com/photo-1581093588401-22f38c0d3a9b?auto=format&fit=crop&w=800&q=80" alt="Slide 2">
+        <img src="https://images.unsplash.com/photo-1581092815360-1a2b3c4d5e6f?auto=format&fit=crop&w=800&q=80" alt="Slide 3">
+      </div>
     </div>
-</section>
+  </section>
 
-  
-  <!-- SERVICES -->
+  <!-- SERVICES SECTION -->
   <section id="services" class="services">
     <h2>আমাদের সেবা</h2>
     <div class="service-grid">
@@ -101,8 +67,7 @@
         <p>বাংলা ও ইংরেজি টাইপিং, সিভি, চিঠি, দরখাস্ত, প্রজেক্ট ফাইল প্রস্তুত।</p>
       </div>
       <div class="card">
-        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Computer Servicing" style="width:100%;max-width:600px;">
-
+        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Computer Servicing">
         <h3>🧰 কম্পিউটার সার্ভিসিং</h3>
         <p>Windows, MS Office, Antivirus, Driver, Printer Setup ও রক্ষণাবেক্ষণ।</p>
       </div>
@@ -111,21 +76,21 @@
         <h3>🎨 ডিজাইন ও ফটো এডিটিং</h3>
         <p>ID Card, Visiting Card, Banner, Poster, Passport Size Photo Edit ও Background Remove।</p>
       </div>
+    </div>
   </section>
-    
 
-  <!-- ABOUT -->
+  <!-- ABOUT SECTION -->
   <section id="about" class="about">
     <h2>আমাদের সম্পর্কে</h2>
     <p>“Bismillah Computer” আপনার সকল ডিজিটাল চাহিদার নির্ভরযোগ্য সঙ্গী। আমরা প্রতিটি কাজ যত্নসহকারে, সময়মতো ও সাশ্রয়ী মূল্যে সম্পন্ন করি।</p>
   </section>
 
-  <!-- CONTACT -->
+  <!-- CONTACT SECTION -->
   <section id="contact" class="contact">
     <h2>যোগাযোগ করুন</h2>
     <div class="contact-box">
       <div class="info">
-        <p><b>📍 ঠিকানা:</b> গৈলা বাজার স্কুল রোড,আগৈলঝাড়া,বরিশাল। </p>
+        <p><b>📍 ঠিকানা:</b> গৈলা বাজার স্কুল রোড, আগৈলঝাড়া, বরিশাল।</p>
         <p><b>📞 ফোন:</b> 01730169444-01902468226</p>
         <p><b>✉ ইমেইল:</b> bismillahcomputer290@gmail.com</p>
         <p><b>⏰ সময়:</b> সকাল ৯টা - রাত 10টা</p>
@@ -145,11 +110,5 @@
     © ২০২৫ Bismillah Computer & Online Service | তৈরি করেছেন ❤ Ahsan Uddin
   </footer>
 
-  
 </body>
 </html>
-
-
-
-
-
