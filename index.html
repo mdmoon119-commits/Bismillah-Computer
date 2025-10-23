@@ -34,7 +34,6 @@
   <!-- HERO SECTION -->
   <section id="home" class="hero">
     <div class="hero-content">
-      <!-- TEXT LEFT -->
       <div class="hero-text">
         <h1>আপনার সব কম্পিউটার ও অনলাইন সেবার নির্ভরযোগ্য ঠিকানা</h1>
         <p>অনলাইন আবেদন, ফর্ম ফিলআপ, প্রিন্ট, স্ক্যান, ডিজাইন, সার্ভিসিং— সব কিছু এক ছাদের নিচে!</p>
@@ -42,9 +41,8 @@
         <a href="#contact" class="btn">এখনই যোগাযোগ করুন</a>
       </div>
 
-      <!-- IMAGES RIGHT -->
-      <div class="hero-image">
-        <img src="image/525_dextop.png" alt="Desktop Service">
+      <div class="hero-image slider">
+        <img src="image/525_dextop.png" alt="Desktop Service" class="active">
         <img src="image/526_laptop.png" alt="Laptop Service">
         <img src="image/527_online.png" alt="Online Service">
       </div>
@@ -113,6 +111,17 @@
   <footer>
     © ২০২৫ Bismillah Computer & Online Service | তৈরি করেছেন ❤ Ahsan Uddin
   </footer>
+
+  <!-- SLIDER JS -->
+  <script>
+    const slides = document.querySelectorAll('.hero-image img');
+    let currentIndex = 0;
+    setInterval(() => {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }, 5000); // 5 seconds per slide
+  </script>
 
 </body>
 </html>
