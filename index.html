@@ -1,127 +1,319 @@
-<!doctype html>
-<html lang="bn">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bismillah Computer & Online Service</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+/* ==========================
+   GLOBAL STYLES
+========================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-  <!-- UPDATE NOTICE -->
-  <div class="update-notice">
-    🔧 ওয়েবসাইটে বর্তমানে আপডেট চলছে। কিছু তথ্য এখনো যুক্ত হয়নি। অনুগ্রহ করে পরে আবার ভিজিট করুন। ধন্যবাদ আপনার সহযোগিতার জন্য!
-  </div>
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f7f7;
+    scroll-behavior: smooth;
+}
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">💻 Bismillah Computer</div>
-    <nav id="nav-menu">
-      <a href="#home">হোম</a>
-      <a href="#services">সেবা</a>
-      <a href="#contact">যোগাযোগ</a>
-      <a href="#about">আমাদের সম্পর্কে</a>
-      <a href="#gallery">গ্যালারি</a>
-    </nav>
-  </header>
+/* ==========================
+   UPDATE NOTICE
+========================== */
+.update-notice {
+    background-color: #fff3cd;
+    color: #856404;
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #ffeeba;
+}
 
-  <!-- ANIMATED TOP TEXT -->
-  <div class="top-animate-text">
-    💻 Bismillah Computer & Online Service - আপনার ডিজিটাল সঙ্গী
-  </div>
+/* ==========================
+   NAVBAR
+========================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-  <!-- HERO SECTION -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>আপনার সব কম্পিউটার ও অনলাইন সেবার নির্ভরযোগ্য ঠিকানা</h1>
-        <p>অনলাইন আবেদন, ফর্ম ফিলআপ, প্রিন্ট, স্ক্যান, ডিজাইন, সার্ভিসিং— সব কিছু এক ছাদের নিচে!</p>
-        <p>মোবাইল: 01902468226 - 01730169444</p>
-        <a href="#contact" class="btn">এখনই যোগাযোগ করুন</a>
-      </div>
+.navbar .logo {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
 
-      <div class="hero-image slider">
-        <img src="image/525_dextop.png" alt="Desktop Service" class="active">
-        <img src="image/526_laptop.png" alt="Laptop Service">
-        <img src="image/527_online.png" alt="Online Service">
-      </div>
-    </div>
-  </section>
+.navbar nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: 0.3s;
+}
 
-  <!-- SERVICES SECTION -->
-  <section id="services" class="services">
-    <h2>আমাদের সেবা</h2>
-    <div class="service-grid">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="Online Form">
-        <h3>🌐 অনলাইন আবেদন ও ফর্ম পূরণ</h3>
-        <p>Passport, NID, Birth Certificate, Job Application সহ সকল অনলাইন আবেদন।</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1596495577886-d920f1fb7238?auto=format&fit=crop&w=800&q=80" alt="Printing">
-        <h3>🖨 প্রিন্টিং, স্ক্যান ও ফটোকপি</h3>
-        <p>কালার ও ব্ল্যাক প্রিন্ট, স্ক্যান, ডকুমেন্ট এডিট ও ফটো কপি দ্রুত ও পরিষ্কারভাবে।</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" alt="Typing">
-        <h3>⌨ টাইপিং ও কম্পোজ</h3>
-        <p>বাংলা ও ইংরেজি টাইপিং, সিভি, চিঠি, দরখাস্ত, প্রজেক্ট ফাইল প্রস্তুত।</p>
-      </div>
-      <div class="card">
-        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Computer Servicing">
-        <h3>🧰 কম্পিউটার সার্ভিসিং</h3>
-        <p>Windows, MS Office, Antivirus, Driver, Printer Setup ও রক্ষণাবেক্ষণ।</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=80" alt="Design">
-        <h3>🎨 ডিজাইন ও ফটো এডিটিং</h3>
-        <p>ID Card, Visiting Card, Banner, Poster, Passport Size Photo Edit ও Background Remove।</p>
-      </div>
-    </div>
-  </section>
+.navbar nav a:hover {
+    text-decoration: underline;
+}
 
-  <!-- ABOUT SECTION -->
-  <section id="about" class="about">
-    <h2>আমাদের সম্পর্কে</h2>
-    <p>“Bismillah Computer” আপনার সকল ডিজিটাল চাহিদার নির্ভরযোগ্য সঙ্গী। আমরা প্রতিটি কাজ যত্নসহকারে, সময়মতো ও সাশ্রয়ী মূল্যে সম্পন্ন করি।</p>
-  </section>
+/* ==========================
+   TOP ANIMATE TEXT
+========================== */
+.top-animate-text {
+    text-align: center;
+    font-size: 1.1rem;
+    padding: 15px 20px;
+    background: linear-gradient(90deg, #007BFF, #00c6ff);
+    color: #fff;
+    animation: slideText 5s linear infinite alternate;
+}
 
-  <!-- CONTACT SECTION -->
-  <section id="contact" class="contact">
-    <h2>যোগাযোগ করুন</h2>
-    <div class="contact-box">
-      <div class="info">
-        <p><b>📍 ঠিকানা:</b> গৈলা বাজার স্কুল রোড, আগৈলঝাড়া, বরিশাল।</p>
-        <p><b>📞 ফোন:</b> 01730169444-01902468226</p>
-        <p><b>✉ ইমেইল:</b> bismillahcomputer290@gmail.com</p>
-        <p><b>⏰ সময়:</b> সকাল ৯টা - রাত 10টা</p>
-      </div>
-      <form id="contactForm">
-        <input type="text" name="name" placeholder="আপনার নাম" required>
-        <input type="email" name="email" placeholder="ইমেইল" required>
-        <textarea name="message" placeholder="আপনার বার্তা লিখুন..." required></textarea>
-        <button type="submit">বার্তা পাঠান</button>
-        <p id="status"></p>
-      </form>
-    </div>
-  </section>
+@keyframes slideText {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+}
 
-  <!-- FOOTER -->
-  <footer>
-    © ২০২৫ Bismillah Computer & Online Service | তৈরি করেছেন ❤ Ahsan Uddin
-  </footer>
+/* ==========================
+   HERO SECTION
+========================== */
+.hero {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-  <!-- SLIDER JS -->
-  <script>
-    const slides = document.querySelectorAll('.hero-image img');
-    let currentIndex = 0;
-    setInterval(() => {
-      slides[currentIndex].classList.remove('active');
-      currentIndex = (currentIndex + 1) % slides.length;
-      slides[currentIndex].classList.add('active');
-    }, 5000); // 5 seconds per slide
-  </script>
+.hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
 
-</body>
-</html>
+/* Hero Text */
+.hero-text {
+    flex: 1 1 400px;
+}
+
+.hero-text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.hero-text .btn {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-text .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Hero Image Frame */
+.hero-image {
+    flex: 1 1 400px;
+    max-width: 500px;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    border: 5px solid #007BFF;
+    background: #fff;
+    transition: transform 0.5s;
+}
+
+.hero-image:hover {
+    transform: scale(1.03);
+}
+
+/* Slider Images */
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: none;
+    transition: opacity 1s ease-in-out;
+    border-radius: 20px;
+}
+
+.hero-image img.active {
+    display: block;
+}
+
+/* ==========================
+   SERVICES SECTION
+========================== */
+.services {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #007BFF;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+.card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* ==========================
+   ABOUT SECTION
+========================== */
+.about {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    color: #555;
+    font-size: 1rem;
+}
+
+/* ==========================
+   CONTACT SECTION
+========================== */
+.contact {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.contact-box .info {
+    flex: 1 1 300px;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.contact-box form {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-box input, .contact-box textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    resize: none;
+}
+
+.contact-box button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.contact-box button:hover {
+    background-color: #0056b3;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 900px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .contact-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-box .info {
+        text-align: center;
+    }
+}
