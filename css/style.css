@@ -18,14 +18,12 @@ body {
 
 /* ==========================
    UPDATE NOTICE
-   (HTML-এ আছে)
 ========================== */
 .update-notice {
     background-color: #ff0000;
     color: #fff;
     text-align: center;
     padding: 10px 0;
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 18px;
     position: fixed;
@@ -108,7 +106,7 @@ body {
 }
 
 /* ==========================
-   HERO SECTION (Updated with Image Slider)
+   HERO SECTION
 ========================== */
 .hero {
     display: flex;
@@ -147,7 +145,7 @@ body {
 
 .hero-text p {
     font-size: 18px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 @keyframes fadeInUp {
@@ -155,50 +153,6 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-.hero-image {
-    flex: 1 1 400px;
-    text-align: center;
-    position: relative;
-    width: 400px;
-    height: 350px;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-}
-
-.hero-image img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
-    opacity: 0;
-    animation: slideShow 12s infinite;
-}
-
-/* ছবিগুলো একটার পর একটা আসবে */
-.hero-image img:nth-child(1) {
-    animation-delay: 0s;
-}
-.hero-image img:nth-child(2) {
-    animation-delay: 4s;
-}
-.hero-image img:nth-child(3) {
-    animation-delay: 8s;
-}
-
-/* স্লাইড অ্যানিমেশন */
-@keyframes slideShow {
-    0% { opacity: 0; transform: scale(1.05); }
-    10% { opacity: 1; transform: scale(1); }
-    30% { opacity: 1; transform: scale(1); }
-    40% { opacity: 0; transform: scale(1.05); }
-    100% { opacity: 0; transform: scale(1.05); }
-}
-
-/* ==========================
-   BUTTON
-========================== */
 .btn {
     display: inline-block;
     background-color: #ff6600;
@@ -214,6 +168,50 @@ body {
 .btn:hover {
     background-color: #ffcc00;
     color: #000;
+}
+
+/* ==========================
+   HERO IMAGE SLIDER
+========================== */
+.hero-image {
+    flex: 1 1 400px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.hero-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    opacity: 0;
+    transform: scale(1.1);
+    animation: smoothSlide 12s infinite;
+    transition: transform 0.5s ease;
+}
+
+.hero-image img:nth-child(1) { animation-delay: 0s; }
+.hero-image img:nth-child(2) { animation-delay: 4s; }
+.hero-image img:nth-child(3) { animation-delay: 8s; }
+
+@keyframes smoothSlide {
+    0% { opacity: 0; transform: scale(1.1); }
+    10% { opacity: 1; transform: scale(1); }
+    30% { opacity: 1; transform: scale(1); }
+    40% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 0; transform: scale(0.95); }
+}
+
+.hero-image:hover img {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
 }
 
 /* ==========================
@@ -372,69 +370,32 @@ footer {
    MEDIA QUERIES - RESPONSIVE
 ========================== */
 @media(max-width: 1200px){
-    .hero-text h1 {
-        font-size: 40px;
-    }
-    .hero-text p {
-        font-size: 17px;
-    }
+    .hero-text h1 { font-size: 40px; }
+    .hero-text p { font-size: 17px; }
 }
 
 @media(max-width: 992px){
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .hero-text {
-        margin-bottom: 30px;
-    }
-    .contact-box {
-        flex-direction: column;
-    }
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .navbar nav a {
-        margin-left: 0;
-        margin-right: 15px;
-        margin-top: 10px;
-    }
+    .hero-content { flex-direction: column; text-align: center; }
+    .hero-text { margin-bottom: 30px; }
+    .contact-box { flex-direction: column; }
+    .navbar { flex-direction: column; align-items: flex-start; }
+    .navbar nav a { margin-left: 0; margin-right: 15px; margin-top: 10px; }
 }
 
 @media(max-width: 768px){
-    .hero-text h1 {
-        font-size: 32px;
-    }
-    .hero-text p {
-        font-size: 16px;
-    }
-    .btn {
-        padding: 12px 25px;
-        font-size: 16px;
-    }
-    .services h2, .about h2, .contact h2 {
-        font-size: 30px;
-    }
+    .hero-text h1 { font-size: 32px; }
+    .hero-text p { font-size: 16px; }
+    .btn { padding: 12px 25px; font-size: 16px; }
+    .services h2, .about h2, .contact h2 { font-size: 30px; }
+    .hero-image { max-width: 350px; height: 280px; }
 }
 
 @media(max-width: 576px){
-    .hero-text h1 {
-        font-size: 26px;
-    }
-    .hero-text p {
-        font-size: 15px;
-    }
-    .top-animate-text {
-        font-size: 16px;
-    }
-    .services h2, .about h2, .contact h2 {
-        font-size: 26px;
-    }
-    .card h3 {
-        font-size: 18px;
-    }
-    .card p {
-        font-size: 14px;
-    }
+    .hero-text h1 { font-size: 26px; }
+    .hero-text p { font-size: 15px; }
+    .top-animate-text { font-size: 16px; }
+    .services h2, .about h2, .contact h2 { font-size: 26px; }
+    .card h3 { font-size: 18px; }
+    .card p { font-size: 14px; }
+    .hero-image { max-width: 300px; height: 220px; }
 }
